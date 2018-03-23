@@ -11,12 +11,13 @@ import java.util.List;
 public class JokeServiceImpl implements JokeService {
 
     private ChuckNorrisQuotes chuckNorrisQuotes;
-    
-    public JokeServiceImpl() {
-        this.chuckNorrisQuotes = new ChuckNorrisQuotes();
+
+    public JokeServiceImpl(ChuckNorrisQuotes chuckNorrisQuotes) {
+        this.chuckNorrisQuotes = chuckNorrisQuotes;
     }
 
     public String getJoke(){
+
         return this.chuckNorrisQuotes.getRandomQuote();
     }
 }
